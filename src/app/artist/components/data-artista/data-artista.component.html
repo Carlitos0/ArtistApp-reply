@@ -1,0 +1,10 @@
+<div class="row my-5 gap-2 justify-content-center">
+  <div class="col-md-2" *ngFor="let artist of artistas">
+    <div class="artist d-flex align-items-center flex-column">
+      <div class="img" [style.background-image]="'url('+artist.imgUrl+')'">
+      </div>
+      <p class="text-center">{{artist.artistName | titlecase}}</p>
+      <p class="text-center">{{artist.musicGender | titlecase}}</p>
+    </div>
+  </div>
+</div>

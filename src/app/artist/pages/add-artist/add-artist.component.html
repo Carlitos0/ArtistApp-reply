@@ -1,0 +1,36 @@
+<div class="container my-prop">
+  <h2 class="mb-5 fw-bolder text-center">Añade a tu artista favorito!</h2>
+  <div class="col-5 mx-auto">
+    <div class="card bg-dark p-1">
+      <div class="d-flex justify-content-end gap-1">
+        <button (click)="clear( artistForm )" class="button-success bg-info"></button>
+        <li
+        routerLink=""
+        class="button-cancel bg-danger"></li>
+      </div>
+      <form #artistForm = "ngForm" (ngSubmit)="save( artistForm )" enctype="multipart/form-data">
+        <div class="card-body">
+          <div class="form-group">
+            <input class="form-control" [(ngModel)]="artistName" type="text" name="artistName" placeholder="Artist's name">
+          </div>
+          <div class="form-group my-3">
+            <input class="form-control" [(ngModel)]="musicGender" type="text" name="musicGender" placeholder="Music Gender">
+          </div>
+          <div class="form-group">
+            <input #input (change)="captar($event)" class="form-control" [(ngModel)]="imgUrl" type="file" name="artistImage">
+          </div>
+          <div class="form-group mt-2 d-flex justify-content-center gap-2">
+            <button class="btn btn-outline-light w-100">Save</button>
+            <button class="btn btn-outline-info w-100">Add to car</button>
+          </div>
+        </div>
+      </form>
+      <div class="form-group px-4">
+        <button class="btn btn-primary w-100 mb-1 mb-0" (click)="visualizar()">Previsualizar Imagen</button>
+      </div>
+    </div>
+    <div class="col-10 mx-auto my-2" *ngIf="previsualizacion">
+      <img class="img-thumbnail" [src]="previsualizacion" alt="">
+    </div>
+  </div>
+</div>

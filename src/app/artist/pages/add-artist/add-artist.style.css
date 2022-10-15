@@ -1,0 +1,24 @@
+/* .form{
+  max-width: 100%;
+  height: 93.2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+.my-prop{
+  margin-top: 100px;
+}
+h2{
+  letter-spacing: 2px;
+  color:  #fff;
+}
+li{
+  list-style: none;
+  cursor: pointer;
+}
+.button-success,.button-cancel{
+  border-radius: 10px;
+  padding: 12px;
+  border: 0;
+}
